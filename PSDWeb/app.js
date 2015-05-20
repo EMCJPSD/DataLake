@@ -3,7 +3,8 @@
  */
 var express=require('express')
 	,morgan=require('morgan')
-	,fs=require('fs');
+	,fs=require('fs')
+	,path=require('path');
 var app=express();
 app.use(express.static('./public'));
 app.use(morgan('dev'));
@@ -15,10 +16,11 @@ app.get('/', function(req,res){
 });
 
 var multipart = require('connect-multiparty');
-app.post('/upload', multipart(), function(req, res){
-  //get filename
 
-  var filename = req.files.key.originalFilename || path.basename(req.files.files.ws.path);
+app.post('/upload', multipart(), function(req, res){
+  //get filenames
+  var filename = req.files.files.originalFilename || path.basename(req.files.files.ws.path);
+  
   //copy file to a public directory
   var targetPath = path.dirname(__filename) + '/public/' + filename;
   //copy file
