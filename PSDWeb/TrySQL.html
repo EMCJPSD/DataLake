@@ -3,12 +3,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="style.css" media="all" />
-	<!--[if IE 7]>
-	<link rel="stylesheet" type="text/css" href="style-ie.css" />
-	<![endif]-->
-<title>Data Lakers Portal Site</title>
+<title>Upload Files</title>
 
 <script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="fancybox/jquery.fancybox-1.3.0.pack.js"></script>
+    <link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox-1.3.0.css" media="screen" /> 
+
+<script src="./js/uploadFiles.js"></script>
+
+	<script type="text/javascript"> 
+		$(document).ready(function() {
+			$("a.fancybox").fancybox({
+				'titleShow'     : false,
+				'transitionIn'	: 'elastic',
+				'transitionOut'	: 'elastic'
+			});
+		});
+	</script> 
+    
 
 <!-- Begin DropDown -->
       
@@ -26,6 +38,7 @@ $("ul.dropdown li ul li:has(ul)").find("a:first").append(" &raquo; ");
 });
 </script>
 
+
 </head>
 
 <body>
@@ -36,7 +49,7 @@ $("ul.dropdown li ul li:has(ul)").find("a:first").append(" &raquo; ");
   <a href="#"><img src="images/facebook.png" width="26" height="26" alt="facebook" /></a>
   <a href="#"><img src="images/twitter.png" width="26" height="26" alt="twitter" /></a>
   <a href="#"><img src="images/linkedin.png" width="26" height="26" alt="linkedin" /></a>
-  <a href="mailto:zhizheng.wang2@emc.com"><img src="images/email.png" width="26" height="26" alt="email" /></a>
+  <a href="#"><img src="images/email.png" width="26" height="26" alt="email" /></a>
 </div>
 
 </div>
@@ -51,8 +64,8 @@ $("ul.dropdown li ul li:has(ul)").find("a:first").append(" &raquo; ");
 <ul class="sub_menu">
     <li><a href="gallery.html">Have a try on DataLake</a>
     	<ul>
-        <li><a href="uploadFiles.html">Upload A File to DataLake</a></li>
-        <li><a href="TrySQL.html">Try SQL</a></li>
+        <li><a href="gallery.html">Upload A File to DataLake</a></li>
+        <li><a href="gallery.html">Try SQL</a></li>
         </ul>
     </li>
     <li><a href="gallery.html">IDCF</a></li>
@@ -68,44 +81,18 @@ $("ul.dropdown li ul li:has(ul)").find("a:first").append(" &raquo; ");
 
 </ul><!-- close menu -->
 
-<div id="gallery"><!-- gallery -->
 
-<ul>
-  <li><a href="gallery.html"><img src="images/tb1.jpg" alt="demo" /></a></li>
-  <li><a href="gallery.html"><img src="images/tb2.jpg" alt="demo" /></a></li>
-  <li><a href="gallery.html"><img src="images/tb3.jpg" alt="demo" /></a></li>
-  <li><a href="gallery.html"><img src="images/tb4.jpg" alt="demo" /></a></li>                        
-</ul>
-
-</div><!-- close gallery -->
- 
- 
-<div id="intro">
-<p><span>Welcome to PSD Data Lake.</span> Here are some messages to all visiting this site</p>
+<div class = "row" style = "text-align: center">
+  <img id = "imgShow" />
 </div>
 
-
-<div id="box_left">
-<h3>About</h3>
-<p>Some introduce messages for our Data Lake Team</p>
-<a href="page.html"><img src="images/more.png" class="more" width="68" height="24" alt="more" /></a>
-</div>
-
-<div id="box_right">
-<h3>Recent</h3>
-<p>What we are recently doing. latest update (latest weekly meeting) can be display here.</p>
-<a href="page.html"><img src="images/more.png" class="more" width="68" height="24" alt="more" /></a>
-</div>
-
-<div id="box_middle">
-<h3>Services</h3>
-<p>Here can list some services (micro service?) what we can provide.</p>
-<a href="page.html"><img src="images/more.png" class="more" width="68" height="24" alt="more" /></a>
-</div>
 
 <div id="footer">
 PSD In <a href="http://japan.emc.com/">EMC Japan</a> | Created by <a href="mailto:zhizheng.wang2@emc.com">Wangzz</a>
 </div>
-
+<!--
+<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+-->
+<script src="./js/jquery.min.js"></script>
 </body>
 </html>
